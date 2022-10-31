@@ -90,18 +90,22 @@ p {
   text-decoration: line-through;
 }
 
-.cta {
-  display: inline-block;
+button.cta {
   background-color: var(--Dark-cyan);
   color: var(--White);
-  text-align: center;
   padding: 1rem 0;
   font-weight: 700;
+  border: none;
   border-radius: 0.5rem;
   transition: background-color 500ms ease;
+  text-align: center;
 }
 
-.cta:hover {
+button.cta img {
+  margin-right: 10px;
+}
+
+button.cta:hover {
   background-color: hsl(158, 36%, 26%);
 }
 
