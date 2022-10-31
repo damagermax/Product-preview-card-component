@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Very-dark-blue: hsl(212, 21%, 14%);
+  --Dark-grayish-blue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+html {
+  font-size: 14px;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  background-color: var(--Cream);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+}
+
+h1,
+h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+p {
+  font-size: 500;
+  color: var(--Dark-grayish-blue);
+}
+
+.card {
+  max-width: 700px;
+}
+
+.card-conatainer {
+  background-color: var(--White);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.card .image {
+  max-width: 100%;
+  object-fit: cover;
+  display: inherit;
+}
+
+.card_content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card .category {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.card .title {
+  font-size: 2.5rem;
+  line-height: 1;
+  color: var(--Very-dark-blue);
+}
+
+.card .desc {
+  line-height: 1.7;
+}
+
+.card_price {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.card_price .current {
+  color: var(--Dark-cyan);
+  font-size: 1.8rem;
+}
+.card_price .old {
+  text-decoration: line-through;
+}
+
+.cta {
+  display: inline-block;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  text-align: center;
+  padding: 1rem 0;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: background-color 500ms ease;
+}
+
+.cta:hover {
+  background-color: hsl(158, 36%, 26%);
+}
+
+@media (max-width: 675px) {
+  html {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+  .card-conatainer {
+    grid-template-columns: 1fr;
+  }
+
+  .card .title,
+  .card_price {
+    margin: 2rem 0;
+  }
+}
