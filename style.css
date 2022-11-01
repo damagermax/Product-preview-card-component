@@ -99,6 +99,7 @@ button.cta {
   border-radius: 0.5rem;
   transition: background-color 500ms ease;
   text-align: center;
+  cursor: pointer;
 }
 
 button.cta img {
